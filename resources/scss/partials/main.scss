@@ -1,0 +1,121 @@
+main {
+    position: relative;
+
+    .jumbo {
+        display: block;
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+    .current-serie {
+        width: $size;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 400px;
+        left: 50%;
+
+        span {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $text-tertiary;
+            background-color: $bg-current;
+            padding: 15px 30px;
+            font-size: $f-size-current;
+        }
+    }
+    .series{
+        background-color: $bg-series;
+        color: $text-tertiary;
+        padding: 55px;
+        padding-bottom: 20px;
+    
+        ul {
+            width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+    
+        }
+        .info-series {
+            width: calc(100% / 6);
+            padding: 13px;
+            padding-bottom: 0;
+            margin-bottom: 13px;
+            cursor: pointer;
+            img {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: center top;
+            }
+            h6 {
+                font-size: $f-size-series;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 20px 0;
+            }
+            &:hover{
+                border: 1px solid $br-primary;
+                img {
+                    filter: grayscale(1);
+                }
+        
+            }
+        }
+        .load-more {
+            text-transform: uppercase;
+            background-color: $bg-current;
+            color: $text-tertiary;
+            font-weight: bold;
+            padding: 12px 60px;
+            display: block;
+            margin: 0 auto;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    .shop {
+        background-color: $bg-current;
+        padding: 50px 0;
+        .list-element{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            width: $size;
+            margin: auto;
+            
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    
+                    .img {
+                        height: 55px;
+                        width: 55px;
+                        display: block;
+                        margin-right: 15px;
+    
+                        img {
+                            object-fit: contain;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    span {
+                        text-transform: uppercase;
+                        color: $text-tertiary;
+                    }
+                }
+                &:hover {
+                    span{
+                        color: $text-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
