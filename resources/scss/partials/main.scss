@@ -8,6 +8,7 @@ main {
         object-fit: cover;
         object-position: center top;
     }
+
     .current-serie {
         width: $size;
         transform: translate(-50%, -50%);
@@ -24,26 +25,29 @@ main {
             font-size: $f-size-current;
         }
     }
-    .series{
+
+    .series {
         background-color: $bg-series;
         color: $text-tertiary;
         padding: 55px;
         padding-bottom: 20px;
-    
+
         ul {
             width: 1280px;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
             list-style-type: none;
-    
+
         }
+
         .info-series {
             width: calc(100% / 6);
             padding: 13px;
             padding-bottom: 0;
             margin-bottom: 13px;
             cursor: pointer;
+
             img {
                 display: block;
                 width: 100%;
@@ -51,20 +55,24 @@ main {
                 object-fit: cover;
                 object-position: center top;
             }
+
             h6 {
                 font-size: $f-size-series;
                 text-transform: uppercase;
                 font-weight: bold;
                 padding: 20px 0;
             }
-            &:hover{
+
+            &:hover {
                 border: 1px solid $br-primary;
+
                 img {
                     filter: grayscale(1);
                 }
-        
+
             }
         }
+
         .load-more {
             text-transform: uppercase;
             background-color: $bg-current;
@@ -77,41 +85,45 @@ main {
             cursor: pointer;
         }
     }
+
     .shop {
         background-color: $bg-current;
         padding: 50px 0;
-        .list-element{
+
+        .list-element {
             list-style-type: none;
             display: flex;
             justify-content: space-around;
             width: $size;
             margin: auto;
-            
+
             li {
                 a {
                     display: flex;
                     align-items: center;
                     text-decoration: none;
-                    
+
                     .img {
                         height: 55px;
                         width: 55px;
                         display: block;
                         margin-right: 15px;
-    
+
                         img {
                             object-fit: contain;
                             width: 100%;
                             height: 100%;
                         }
                     }
+
                     span {
                         text-transform: uppercase;
                         color: $text-tertiary;
                     }
                 }
+
                 &:hover {
-                    span{
+                    span {
                         color: $text-secondary;
                     }
                 }

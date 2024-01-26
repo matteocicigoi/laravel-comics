@@ -1,0 +1,101 @@
+// footer
+footer {
+    background-image: url('../img/footer-bg.jpg');
+
+    .menu-footer {
+        height: 370px;
+        padding-top: 45px;
+        max-width: 1280px;
+        margin: 0 auto;
+        background-image: url('../img/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position: calc(1280px - 570px) -90px;
+
+        .list-footer {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            width: max-content;
+            height: 100%;
+            list-style-type: none;
+            gap: 30px;
+
+            li {
+                h2 {
+                    color: white;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        padding: 2px;
+
+                        a {
+                            text-decoration: none;
+                            color: #959595;
+                            font-size: 14px;
+
+                            &:hover {
+                                color: #0282F9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        background-color: $bg-footer;
+
+        >div {
+            max-width: $size;
+            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+            padding: 20px 0;
+        }
+
+        button {
+            all: unset;
+            border: 2px solid $br-primary;
+            text-transform: uppercase;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+
+            &:hover {
+                color: $text-primary;
+                background-color: $bg-button;
+            }
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+
+            h2 {
+                color: $text-primary;
+                text-transform: uppercase;
+                margin-right: 20px;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+
+                li {
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}

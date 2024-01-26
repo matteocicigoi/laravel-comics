@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $data = [
-        'comics' => config('_comicsDb')
+        'linkHeader' => config('_headerLink'),
+        'comics' => config('_comicsDb'),
+        'shop' => config('_shop'),
+        'linkFooter' => config('_menuFooter'),
+        'bottomFooter' => config('_menuFooterBottom')
     ];
 
     return view('home', $data);

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('main')
+    <!-- Main -->
     <main>
         <!-- Jumbotron -->
         <img class="jumbo" src="{{ Vite::asset('resources/img/jumbotron.jpg') }}" alt="Jumbo">
@@ -28,48 +29,20 @@
         <!-- Shop -->
         <div class="shop">
             <ul class="list-element">
+                @foreach ($shop['0'] as $element)
                 <li>
-                    <a href="#">
+                    <a href="{{ $element['link'] }}">
                         <div class="img">
-                            <img src="{{ Vite::asset('resources/img/buy-comics-digital-comics.png') }}" alt="digital comics">
+                            <img src="{{ Vite::asset('resources/img/' . $element['img']) }}"
+                                alt="digital comics">
                         </div>
-                        <span>digital comics</span>
+                        <span>{{ $element['name'] }}</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <div class="img">
-                            <img src="{{ Vite::asset('resources/img/buy-comics-merchandise.png') }}" alt="dc merchandise">
-                        </div>
-                        <span>dc merchandise</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="img">
-                            <img src="{{ Vite::asset('resources/img/buy-comics-subscriptions.png') }}" alt="subscription">
-                        </div>
-                        <span>subscription</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="img">
-                            <img src="{{ Vite::asset('resources/img/buy-comics-shop-locator.png') }}" alt="comic shop locator">
-                        </div>
-                        <span>comic shop locator</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="img">
-                            <img src="{{ Vite::asset('resources/img/buy-dc-power-visa.svg') }}" alt="dc power visa">
-                        </div>
-                        <span>dc power visa</span>
-                    </a>
-                </li>
+                @endforeach
             </ul>
         </div>
         <!-- Fine Shop -->
     </main>
+    <!-- Fine Main -->
 @endsection
