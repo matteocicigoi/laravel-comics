@@ -22,6 +22,8 @@ Route::get('/', function () {
         'linkFooter' => config('_menuFooter'),
         'bottomFooter' => config('_menuFooterBottom')
     ];
+    // imposta il valore a 1
+    $data['linkHeader']['selected'] = 1;
 
     return view('home', $data);
 });

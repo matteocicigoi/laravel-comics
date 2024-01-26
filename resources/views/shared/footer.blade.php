@@ -20,9 +20,9 @@
         <div>
             <button>sign-up now!</button>
             <div class="links">
-                <h2>{{ $bottomFooter[0]['name'] }}</h2>
+                <h2>{{ $bottomFooter['name'] }}</h2>
                 <ul>
-                    @foreach ($bottomFooter[0]['link'] as $link)
+                    @foreach ($bottomFooter['link'] as $link)
                         <li><a href="{{ $link['link'] }}"></a><img
                                 src="{{ Vite::asset('resources/img/' . $link['img']) }}" alt="Link"></li>
                     @endforeach
